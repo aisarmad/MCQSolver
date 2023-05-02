@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenAI Question Generator</title>
+  <!-- Include JavaScript and CSS files -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>OpenAI Question Generator</h1>
+  <form id="answer-form">
+    <label for="question">Enter your question:</label>
+    <input type="text" id="question" name="question" required><br><br>
+
+    <div class="options-container">
+      <label for="choice1">Option 1:</label>
+      <input type="text" id="choice1" name="choice[]" required><br>
+
+      <label for="choice2">Option 2:</label>
+      <input type="text" id="choice2" name="choice[]" required><br>
+
+      <label for="choice3">Option 3:</label>
+      <input type="text" id="choice3" name="choice[]" ><br>
+
+      <label for="choice4">Option 4:</label>
+      <input type="text" id="choice4" name="choice[]" ><br>
+
+      <label for="choice5">Option 5:</label>
+      <input type="text" id="choice5" name="choice[]" ><br>
+
+      <label for="choice6">Option 6:</label>
+      <input type="text" id="choice6" name="choice[]" ><br>
+    </div>
+
+    <input type="submit" value="Generate Answer">
+  </form>
+
+  <div id="answer-container">
+    <label for="answer">Generated Answer:</label>
+    <textarea id="answer" rows="4" cols="50" readonly></textarea>
+  </div>
+</body>
+</html>
